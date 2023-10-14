@@ -26,6 +26,11 @@
     }
     @font-face {
         font-family: "Morabba Bold";
-        src: local("Morabba Bold"), url("../../../coffee-shop/public/public/fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
+        src: local("Morabba Bold"), url("../../../coffee-shop/public/fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
+    }
+
+    body {
+        background-image: url("../../../coffee-shop/public/images/headerBgDesktop.png");
+        background-repeat: no-repeat;
     }
 }
