@@ -28,6 +28,9 @@ module.exports = {
             },
             letterSpacing: {
                 tightest: "-0.065em"
+            },
+            spacing: {
+                30: "7.5rem"
             }
         },
     },
@@ -35,7 +38,11 @@ module.exports = {
         function ({addVariant}) {
             addVariant('child', '& > *');
             addVariant('child-hover', '& > *:hover');
+        },
+        function ({addVariant}) {
+            addVariant('not-1st-child', '&>*:not(:first-child)');
         }
+
     ],
 }
 
