@@ -34,3 +34,44 @@
         background-repeat: no-repeat;
     }
 }
+
+@layer components {
+    .submenu {
+        @apply max-h-0 overflow-hidden text-sm px-7 space-y-3 text-zinc-600 dark:text-white transition-all;
+    }
+
+    .submenu--open {
+        @apply max-h-min mt-3;
+    }
+
+    .submenu__item {
+
+    }
+
+    .submenu__item--active {
+        @apply pr-2.5 text-orange-300 relative;
+
+    }
+
+    .submenu__item--active::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background-color: #fdba74;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border-radius: 100%;
+
+    }
+
+    .overlay {
+        @apply invisible opacity-0 fixed inset-0 w-full h-full bg-black/40 z-10 md:hidden transition-all;
+    }
+
+    .overlay--visible {
+        @apply visible opacity-100;
+    }
+}
