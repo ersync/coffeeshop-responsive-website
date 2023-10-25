@@ -29,10 +29,6 @@
         src: local("Morabba Bold"), url("../../../coffee-shop/public/fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
     }
 
-    body {
-        background-image: url("../../../coffee-shop/public/images/headerBgDesktop.webp");
-        background-repeat: no-repeat;
-    }
 }
 
 @layer components {
@@ -74,4 +70,49 @@
     .overlay--visible {
         @apply visible opacity-100;
     }
+
+
+    .circle-wrapper {
+        @apply absolute hidden md:flex justify-center items-center left-0 right-0 bottom-0 mx-auto translate-y-2/4;
+    }
+
+    .circle {
+        @apply flex justify-center items-center border rounded-full;
+    }
+
+    .outer-circle {
+        @apply w-[203px] h-[203px] border-white/25
+    }
+
+    .middle-circle {
+        @apply w-[145px] h-[145px] border-white/50
+    }
+
+    .inner-circle {
+        @apply w-[95px] h-[95px] border-white/80
+    }
+
+    @media screen and (min-width: 1024px) {
+        html.dark .products {
+            background: url("../../coffee-shop/public/images/products-bg.png");
+        }
+
+        .products {
+            background: linear-gradient(rgba(243, 244, 246, 0.65), rgb(243, 244, 246, 0.65)), url("../../coffee-shop/public/images/products-bg.png") center/contain no-repeat;
+            height: 900px;
+        }
+    }
+
+    .section-title {
+        @apply text-2xl md:text-5xl font-MorabbaMedium text-zinc-700 dark:text-white;
+    }
+
+    .section-subtitle {
+        @apply inline-block text-lg md:text-3xl font-MorabbaLight mt-0.5 md:mt-1.5 text-zinc-700 dark:text-white;
+    }
+
+    .section-link {
+        @apply flex items-center md:gap-x-1 text-base md:text-xl tracking-tightest md:hover:bg-orange-300/20 rounded-md py-1.5 pr-3 pl-1 text-orange-300 dark:text-white transition-colors;
+    }
+
 }

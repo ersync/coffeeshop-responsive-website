@@ -31,8 +31,26 @@ module.exports = {
             },
             spacing: {
                 30: "7.5rem"
+            },
+            container: {
+                center: true,
+                padding: {
+                    DEFAULT: "1rem",
+                    lg: "0.625rem"
+                }
+            },
+            backgroundImage: {
+                "home-desktop": "url(../../coffee-shop/public/images/headerBgDesktop.webp)",
+                "home-mobile": "url(../../coffee-shop/public/images/headerBgMobile.webp)",
             }
         },
+        screens: {
+            'xs': '480px',
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+        }
     },
     plugins: [
         function ({addVariant}) {
