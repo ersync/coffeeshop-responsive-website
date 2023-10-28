@@ -30,7 +30,9 @@ module.exports = {
                 tightest: "-0.065em"
             },
             spacing: {
-                30: "7.5rem"
+                25: "6.25rem",
+                30: "7.5rem",
+                50: "12.5rem"
             },
             container: {
                 center: true,
@@ -38,6 +40,9 @@ module.exports = {
                     DEFAULT: "1rem",
                     lg: "0.625rem"
                 }
+            },
+            transitionDuration: {
+                "400": "400ms"
             },
             backgroundImage: {
                 "home-desktop": "url(../../coffee-shop/public/images/headerBgDesktop.webp)",

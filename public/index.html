@@ -8,6 +8,7 @@
     <title>Coffee Shop</title>
     <link rel="stylesheet" href="/public/styles/app.css">
     <link rel="icon" type="image/x-icon" href="/images/fav-icon.png">
+    <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
     <script type="text/javascript">
         if (localStorage.theme === 'dark' ||
             (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -567,7 +568,7 @@
     <!-- products section -->
     <section class="products pt-8 md:pt-24 lg:pt-48">
         <div class="container">
-            <!--  products header -->
+            <!--  section header -->
             <div class="flex justify-between items-end mb-5 md:mb-12">
                 <div class="">
                     <h3 class="section-title">جدیدترین محصولات</h3>
@@ -581,7 +582,7 @@
                     </svg>
                 </a>
             </div>
-            <!--  products body -->
+            <!--  section body -->
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-5">
                 <!--  product -->
                 <div class="product p-2 md:p-5 bg-white dark:bg-zinc-700 shadow-normal rounded-2xl">
@@ -1056,11 +1057,461 @@
             </div>
         </div>
     </section>
+    <!-- product-categories section -->
+    <section class="products-categories mb-10 md:mb-20">
+        <div class="container">
+            <!-- categories wrapper  -->
+            <div class="flex justify-center items-center flex-wrap gap-y-6 gap-x-[74px] sm:gap-x-[69px] md:gap-x-[68px] xl:gap-x-[65px]">
+                <div class="w-25 md:w-50 text-center transform hover:scale-105 transition-all group duration-300 delay-75">
+                    <a href="#">
+                        <img src="../../coffee-shop/public/images/categories/category1.png" alt="">
+                        <span class="inline-block mt-1.5 md:mt-2.5 font-DanaDemiBold text-sm md:text-xl text-zinc-700 dark:text-white group-hover:text-orange-400 dark:group-hover:text-orange-300 transition-colors delay-75">قهوه دمی و اسپرسو</span>
+                    </a>
+                </div>
+                <div class="w-25 md:w-50 text-center transform hover:scale-105 transition-all group duration-300 delay-75">
+                    <a href="#">
+                        <img src="../../coffee-shop/public/images/categories/category2.png" alt="">
+                        <span class="inline-block mt-1.5 md:mt-2.5 font-DanaDemiBold text-sm md:text-xl text-zinc-700 dark:text-white group-hover:text-orange-400 dark:group-hover:text-orange-300 transition-colors delay-75">لوازم جانبی و تجهیزات</span>
+                    </a>
+                </div>
+                <div class="w-25 md:w-50 text-center transform hover:scale-105 transition-all group duration-300 delay-75">
+                    <a href="#">
+                        <img src="../../coffee-shop/public/images/categories/category3.png" alt="">
+                        <span class="inline-block mt-1.5 md:mt-2.5 font-DanaDemiBold text-sm md:text-xl text-zinc-700 dark:text-white group-hover:text-orange-400 dark:group-hover:text-orange-300 transition-colors delay-75">اسپرسو ساز</span>
+                    </a>
+                </div>
+                <div class="w-25 md:w-50 text-center transform hover:scale-105 transition-all group duration-300 delay-75">
+                    <a href="#">
+                        <img src="../../coffee-shop/public/images/categories/category4.png" alt="">
+                        <span class="inline-block mt-1.5 md:mt-2.5 font-DanaDemiBold text-sm md:text-xl text-zinc-700 dark:text-white group-hover:text-orange-400 dark:group-hover:text-orange-300 transition-colors delay-75">پک تستر قهوه</span>
+                    </a>
+                </div>
+                <div class="w-25 md:w-50 text-center transform hover:scale-105 transition-all group duration-300 delay-75">
+                    <a href="#">
+                        <img src="../../coffee-shop/public/images/categories/category5.png" alt="">
+                        <span class="inline-block mt-1.5 md:mt-2.5 font-DanaDemiBold text-sm md:text-xl text-zinc-700 dark:text-white group-hover:text-orange-400 dark:group-hover:text-orange-300 transition-colors delay-75">قهوه ترک</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- best-selling section -->
+    <section class="best-selling mb-9 mb-20">
+        <div class="container">
+            <!-- section header -->
+            <div class="flex justify-between items-end mb-5 md:mb-12">
+                <div>
+                    <h3 class="section-title">محصولات پرفروش</h3>
+                    <span class="section-subtitle">پیشنهاد قهوه خور ها ...</span>
+                </div>
+                <!-- slider navigation buttons -->
+                <div class="flex gap-x-3 md:gap-x-[18px]">
+                    <span class="swiper-button-prev-custom">
+                            <svg class="w-5 h-5 md:w-[26px] md:h-[26px] rotate-180">
+                                <use href="#chevron-left-mini"></use>
+                            </svg>
+                    </span>
+                    <span class="swiper-button-next-custom">
+                            <svg class="w-5 h-5 md:w-[26px] md:h-[26px]">
+                                <use href="#chevron-left-mini"></use>
+                            </svg>
+                    </span>
+                </div>
 
+            </div>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product p-2 md:p-5 bg-white dark:bg-zinc-700 shadow-normal rounded-2xl">
+                            <!--  product image -->
+                            <div class="relative mb-2 md:mb-5 ">
+                                <span class="absolute pt-1 md:pt-1.5 pl-2 md:pl-3.5 pr-1.5 md:pr-3 right-1 top-1 font-DanaDemiBold text-xs md:text-base bg-orange-300 text-white dark:text-zinc-700 rounded-full">12%</span>
+                                <img class="w-32 md:w-auto mx-auto min-h-[128px] md:min-h-[192px] lg:min-h-[196px] xl:min-h-[260px]"
+                                     loading="lazy"
+                                     src="./images/products/p5.png"
+                                     alt="">
+                            </div>
+                            <!--  product caption -->
+                            <h5 class="h-10 md:h-14 text-sm md:text-xl font-DanaMedium text-zinc-700 dark:text-white mb-1.5 md:mb-2.5 line-clamp-2">
+                                قهوه ترک بن مانو مقدار
+                            </h5>
+                            <!--  product price -->
+                            <div class="flex items-center gap-x-2 md:gap-x-2.5">
+                                <div class="text-teal-600 dark:text-emerald-600">
+                                    <span class="font-DanaDemiBold text-base md:text-xl">154,000</span>
+                                    <span class="text-xs md:text-sm tracking-tighter">تومان</span>
+                                </div>
+                                <div class="offer">
+                                    <span class="text-sm md:text-lg">175,000</span>
+                                    <span class="hidden xl:inline text-sm tracking-tighter">تومان</span>
+                                </div>
+                            </div>
+                            <!-- product footer -->
+                            <div class="flex flex-row xs:flex-row items-center justify-between mt-2.5 md:mt-4">
+                                <div class="flex items-center text-gray-400 gap-x-1.5 xs:gap-x-2.5 md:gap-x-3">
+                            <span class="inline-block bg-gray-100 dark:bg-zinc-800 rounded-full p-2 cursor-pointer transition-all hover:text-white hover:bg-teal-600 dark:hover:bg-emerald-500">
+                                <svg class="w-4 h-4 md:w-5 md:h-5">
+                                    <use href="#shopping-cart"></use>
+                                </svg>
+                            </span>
+                                    <span class="inline-block hover:text-teal-600 dark:hover:text-emerald-500 rounded-full cursor-pointer transition-all">
+                                <svg class="w-4 h-4 md:w-6 md:h-6">
+                                    <use href="#arrow-right-left"></use>
+                                </svg>
+                            </span>
+                                </div>
+                                <!-- product rate -->
+                                <span class="flex text-yellow-400 cursor-pointer cursor=pointer child:w-4 child:h-4 child:md:w-6 child:md:h-6">
+                            <svg class="text-gray-300 dark:text-gray-400">
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg><svg>
+                                <use href="#star"></use>
+                            </svg>
+
+                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product p-2 md:p-5 bg-white dark:bg-zinc-700 shadow-normal rounded-2xl">
+                            <!--  product image -->
+                            <div class="relative mb-2 md:mb-5 ">
+                                <span class="absolute pt-1 md:pt-1.5 pl-2 md:pl-3.5 pr-1.5 md:pr-3 right-1 top-1 font-DanaDemiBold text-xs md:text-base bg-orange-300 text-white dark:text-zinc-700 rounded-full">12%</span>
+                                <img class="w-32 md:w-auto mx-auto min-h-[128px] md:min-h-[192px] lg:min-h-[196px] xl:min-h-[260px]"
+                                     loading="lazy" src="./images/products/p6.png" alt="">
+                            </div>
+                            <!--  product caption -->
+                            <h5 class="h-10 md:h-14 text-sm md:text-xl font-DanaMedium text-zinc-700 dark:text-white mb-1.5 md:mb-2.5 line-clamp-2">
+                                قهوه ترک بن مانو مقدار ۲۵۰ گرم خط دوم اسم طولانی
+                            </h5>
+                            <!--  product price -->
+                            <div class="flex items-center gap-x-2 md:gap-x-2.5">
+                                <div class="text-teal-600 dark:text-emerald-600">
+                                    <span class="font-DanaDemiBold text-base md:text-xl">154,000</span>
+                                    <span class="text-xs md:text-sm tracking-tighter">تومان</span>
+                                </div>
+                                <div class="offer">
+                                    <span class="text-sm md:text-lg">175,000</span>
+                                    <span class="hidden xl:inline text-sm tracking-tighter">تومان</span>
+                                </div>
+                            </div>
+                            <!-- product footer -->
+                            <div class="flex flex-row xs:flex-row items-center justify-between mt-2.5 md:mt-4">
+                                <div class="flex items-center text-gray-400 gap-x-1.5 xs:gap-x-2.5 md:gap-x-3">
+                            <span class="inline-block bg-gray-100 dark:bg-zinc-800 rounded-full p-2 cursor-pointer transition-all hover:text-white hover:bg-teal-600 dark:hover:bg-emerald-500">
+                                <svg class="w-4 h-4 md:w-5 md:h-5">
+                                    <use href="#shopping-cart"></use>
+                                </svg>
+                            </span>
+                                    <span class="inline-block hover:text-teal-600 dark:hover:text-emerald-500 rounded-full cursor-pointer transition-all">
+                                <svg class="w-4 h-4 md:w-6 md:h-6">
+                                    <use href="#arrow-right-left"></use>
+                                </svg>
+                            </span>
+                                </div>
+                                <!-- product rate -->
+                                <span class="flex text-yellow-400 cursor-pointer cursor=pointer child:w-4 child:h-4 child:md:w-6 child:md:h-6">
+                            <svg class="text-gray-300 dark:text-gray-400">
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg><svg>
+                                <use href="#star"></use>
+                            </svg>
+
+                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product p-2 md:p-5 bg-white dark:bg-zinc-700 shadow-normal rounded-2xl">
+                            <!--  product image -->
+                            <div class="relative mb-2 md:mb-5 ">
+                                <span class="absolute pt-1 md:pt-1.5 pl-2 md:pl-3.5 pr-1.5 md:pr-3 right-1 top-1 font-DanaDemiBold text-xs md:text-base bg-orange-300 text-white dark:text-zinc-700 rounded-full">12%</span>
+                                <img class="w-32 md:w-auto mx-auto min-h-[128px] md:min-h-[192px] lg:min-h-[196px] xl:min-h-[260px]"
+                                     loading="lazy" src="./images/products/p7.png" alt="">
+                            </div>
+                            <!--  product caption -->
+                            <h5 class="h-10 md:h-14 text-sm md:text-xl font-DanaMedium text-zinc-700 dark:text-white mb-1.5 md:mb-2.5 line-clamp-2">
+                                قهوه ترک بن مانو
+                            </h5>
+                            <!--  product price -->
+                            <div class="flex items-center gap-x-2 md:gap-x-2.5">
+                                <div class="text-teal-600 dark:text-emerald-600">
+                                    <span class="font-DanaDemiBold text-base md:text-xl">154,000</span>
+                                    <span class="text-xs md:text-sm tracking-tighter">تومان</span>
+                                </div>
+                                <div class="offer">
+                                    <span class="text-sm md:text-lg">175,000</span>
+                                    <span class="hidden xl:inline text-sm tracking-tighter">تومان</span>
+                                </div>
+                            </div>
+                            <!-- product footer -->
+                            <div class="flex flex-row xs:flex-row items-center justify-between mt-2.5 md:mt-4">
+                                <div class="flex items-center text-gray-400 gap-x-1.5 xs:gap-x-2.5 md:gap-x-3">
+                            <span class="inline-block bg-gray-100 dark:bg-zinc-800 rounded-full p-2 cursor-pointer transition-all hover:text-white hover:bg-teal-600 dark:hover:bg-emerald-500">
+                                <svg class="w-4 h-4 md:w-5 md:h-5">
+                                    <use href="#shopping-cart"></use>
+                                </svg>
+                            </span>
+                                    <span class="inline-block hover:text-teal-600 dark:hover:text-emerald-500 rounded-full cursor-pointer transition-all">
+                                <svg class="w-4 h-4 md:w-6 md:h-6">
+                                    <use href="#arrow-right-left"></use>
+                                </svg>
+                            </span>
+                                </div>
+                                <!-- product rate -->
+                                <span class="flex text-yellow-400 cursor-pointer cursor=pointer child:w-4 child:h-4 child:md:w-6 child:md:h-6">
+                            <svg class="text-gray-300 dark:text-gray-400">
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg><svg>
+                                <use href="#star"></use>
+                            </svg>
+
+                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product p-2 md:p-5 bg-white dark:bg-zinc-700 shadow-normal rounded-2xl">
+                            <!--  product image -->
+                            <div class="relative mb-2 md:mb-5 ">
+                                <span class="absolute pt-1 md:pt-1.5 pl-2 md:pl-3.5 pr-1.5 md:pr-3 right-1 top-1 font-DanaDemiBold text-xs md:text-base bg-orange-300 text-white dark:text-zinc-700 rounded-full">12%</span>
+                                <img class="w-32 md:w-auto mx-auto min-h-[128px] md:min-h-[192px] lg:min-h-[196px] xl:min-h-[260px]"
+                                     loading="lazy" src="./images/products/p8.png" alt="">
+                            </div>
+                            <!--  product caption -->
+                            <h5 class="h-10 md:h-14 text-sm md:text-xl font-DanaMedium text-zinc-700 dark:text-white mb-1.5 md:mb-2.5 line-clamp-2">
+                                قهوه ترک بن مانو مقدار ۲۵۰ گرم خط دوم اسم طولانی
+                            </h5>
+                            <!--  product price -->
+                            <div class="flex items-center gap-x-2 md:gap-x-2.5">
+                                <div class="text-teal-600 dark:text-emerald-600">
+                                    <span class="font-DanaDemiBold text-base md:text-xl">154,000</span>
+                                    <span class="text-xs md:text-sm tracking-tighter">تومان</span>
+                                </div>
+                                <div class="offer">
+                                    <span class="text-sm md:text-lg">175,000</span>
+                                    <span class="hidden xl:inline text-sm tracking-tighter">تومان</span>
+                                </div>
+                            </div>
+                            <!-- product footer -->
+                            <div class="flex flex-row xs:flex-row items-center justify-between mt-2.5 md:mt-4">
+                                <div class="flex items-center text-gray-400 gap-x-1.5 xs:gap-x-2.5 md:gap-x-3">
+                            <span class="inline-block bg-gray-100 dark:bg-zinc-800 rounded-full p-2 cursor-pointer transition-all hover:text-white hover:bg-teal-600 dark:hover:bg-emerald-500">
+                                <svg class="w-4 h-4 md:w-5 md:h-5">
+                                    <use href="#shopping-cart"></use>
+                                </svg>
+                            </span>
+                                    <span class="inline-block hover:text-teal-600 dark:hover:text-emerald-500 rounded-full cursor-pointer transition-all">
+                                <svg class="w-4 h-4 md:w-6 md:h-6">
+                                    <use href="#arrow-right-left"></use>
+                                </svg>
+                            </span>
+                                </div>
+                                <!-- product rate -->
+                                <span class="flex text-yellow-400 cursor-pointer cursor=pointer child:w-4 child:h-4 child:md:w-6 child:md:h-6">
+                            <svg class="text-gray-300 dark:text-gray-400">
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg><svg>
+                                <use href="#star"></use>
+                            </svg>
+
+                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product p-2 md:p-5 bg-white dark:bg-zinc-700 shadow-normal rounded-2xl">
+                            <!--  product image -->
+                            <div class="relative mb-2 md:mb-5 ">
+                                <span class="absolute pt-1 md:pt-1.5 pl-2 md:pl-3.5 pr-1.5 md:pr-3 right-1 top-1 font-DanaDemiBold text-xs md:text-base bg-orange-300 text-white dark:text-zinc-700 rounded-full">12%</span>
+                                <img class="w-32 md:w-auto mx-auto min-h-[128px] md:min-h-[192px] lg:min-h-[196px] xl:min-h-[260px]"
+                                     loading="lazy" src="./images/products/p5.png" alt="">
+                            </div>
+                            <!--  product caption -->
+                            <h5 class="h-10 md:h-14 text-sm md:text-xl font-DanaMedium text-zinc-700 dark:text-white mb-1.5 md:mb-2.5 line-clamp-2">
+                                قهوه ترک بن مانو مقدار ۲۵۰ گرم خط دوم اسم طولانی
+                            </h5>
+                            <!--  product price -->
+                            <div class="flex items-center gap-x-2 md:gap-x-2.5">
+                                <div class="text-teal-600 dark:text-emerald-600">
+                                    <span class="font-DanaDemiBold text-base md:text-xl">154,000</span>
+                                    <span class="text-xs md:text-sm tracking-tighter">تومان</span>
+                                </div>
+                                <div class="offer">
+                                    <span class="text-sm md:text-lg">175,000</span>
+                                    <span class="hidden xl:inline text-sm tracking-tighter">تومان</span>
+                                </div>
+                            </div>
+                            <!-- product footer -->
+                            <div class="flex flex-row xs:flex-row items-center justify-between mt-2.5 md:mt-4">
+                                <div class="flex items-center text-gray-400 gap-x-1.5 xs:gap-x-2.5 md:gap-x-3">
+                            <span class="inline-block bg-gray-100 dark:bg-zinc-800 rounded-full p-2 cursor-pointer transition-all hover:text-white hover:bg-teal-600 dark:hover:bg-emerald-500">
+                                <svg class="w-4 h-4 md:w-5 md:h-5">
+                                    <use href="#shopping-cart"></use>
+                                </svg>
+                            </span>
+                                    <span class="inline-block hover:text-teal-600 dark:hover:text-emerald-500 rounded-full cursor-pointer transition-all">
+                                <svg class="w-4 h-4 md:w-6 md:h-6">
+                                    <use href="#arrow-right-left"></use>
+                                </svg>
+                            </span>
+                                </div>
+                                <!-- product rate -->
+                                <span class="flex text-yellow-400 cursor-pointer cursor=pointer child:w-4 child:h-4 child:md:w-6 child:md:h-6">
+                            <svg class="text-gray-300 dark:text-gray-400">
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg><svg>
+                                <use href="#star"></use>
+                            </svg>
+
+                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product p-2 md:p-5 bg-white dark:bg-zinc-700 shadow-normal rounded-2xl">
+                            <!--  product image -->
+                            <div class="relative mb-2 md:mb-5 ">
+                                <span class="absolute pt-1 md:pt-1.5 pl-2 md:pl-3.5 pr-1.5 md:pr-3 right-1 top-1 font-DanaDemiBold text-xs md:text-base bg-orange-300 text-white dark:text-zinc-700 rounded-full">12%</span>
+                                <img class="w-32 md:w-auto mx-auto min-h-[128px] md:min-h-[192px] lg:min-h-[196px] xl:min-h-[260px]"
+                                     loading="lazy" src="./images/products/p6.png" alt="">
+                            </div>
+                            <!--  product caption -->
+                            <h5 class="h-10 md:h-14 text-sm md:text-xl font-DanaMedium text-zinc-700 dark:text-white mb-1.5 md:mb-2.5 line-clamp-2">
+                                قهوه ترک بن مانو مقدار ۲۵۰ گرم خط دوم اسم طولانی
+                            </h5>
+                            <!--  product price -->
+                            <div class="flex items-center gap-x-2 md:gap-x-2.5">
+                                <div class="text-teal-600 dark:text-emerald-600">
+                                    <span class="font-DanaDemiBold text-base md:text-xl">154,000</span>
+                                    <span class="text-xs md:text-sm tracking-tighter">تومان</span>
+                                </div>
+                                <div class="offer">
+                                    <span class="text-sm md:text-lg">175,000</span>
+                                    <span class="hidden xl:inline text-sm tracking-tighter">تومان</span>
+                                </div>
+                            </div>
+                            <!-- product footer -->
+                            <div class="flex flex-row xs:flex-row items-center justify-between mt-2.5 md:mt-4">
+                                <div class="flex items-center text-gray-400 gap-x-1.5 xs:gap-x-2.5 md:gap-x-3">
+                            <span class="inline-block bg-gray-100 dark:bg-zinc-800 rounded-full p-2 cursor-pointer transition-all hover:text-white hover:bg-teal-600 dark:hover:bg-emerald-500">
+                                <svg class="w-4 h-4 md:w-5 md:h-5">
+                                    <use href="#shopping-cart"></use>
+                                </svg>
+                            </span>
+                                    <span class="inline-block hover:text-teal-600 dark:hover:text-emerald-500 rounded-full cursor-pointer transition-all">
+                                <svg class="w-4 h-4 md:w-6 md:h-6">
+                                    <use href="#arrow-right-left"></use>
+                                </svg>
+                            </span>
+                                </div>
+                                <!-- product rate -->
+                                <span class="flex text-yellow-400 cursor-pointer cursor=pointer child:w-4 child:h-4 child:md:w-6 child:md:h-6">
+                            <svg class="text-gray-300 dark:text-gray-400">
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg><svg>
+                                <use href="#star"></use>
+                            </svg>
+
+                        </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div></div>
+            </div>
+
+        </div>
+    </section>
 </main>
 <footer></footer>
 <!-- overlay-->
 <div class="overlay"></div>
-<script src="/public/scripts/app.js"></script>
+<script src="./scripts/app.js"></script>
+<script src="./scripts/swiper-bundle.min.js"></script>
+<script>
+
+    const swiper = new Swiper(".swiper", {
+        slidesPerView: 2,
+        spaceBetween: 14,
+        navigation: {
+            nextEl: '.swiper-button-next-custom',
+            prevEl: '.swiper-button-prev-custom',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 3,
+                spaceBetween: 14,
+
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+        }
+    });
+
+</script>
 </body>
 </html>

@@ -138,4 +138,8 @@
         background: linear-gradient(to left, rgba(0, 0, 0, 0.6) 33.85%, rgba(0, 0, 0, 0.1)), url("../../coffee-shop/public/images/categories/category-left.jpg") center/cover no-repeat;
 
     }
+
+    .swiper-button-next-custom, .swiper-button-prev-custom {
+        @apply flex justify-center items-center w-9 h-9 md:w-10 md:h-10 text-zinc-700 bg-white dark:text-white dark:bg-zinc-700 shadow-normal rounded-full transition-all hover:bg-gray-300 dark:hover:text-zinc-700 dark:hover:bg-white;
+    }
 }
