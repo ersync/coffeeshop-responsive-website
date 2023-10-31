@@ -147,7 +147,11 @@
             stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/>
     </symbol>
-
+    <symbol id="phone" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+    </symbol>
 </svg>
 
 <!-- desktop header -->
@@ -1546,7 +1550,7 @@
         </div>
     </section>
     <!-- blog section -->
-    <section class="blog mb-7 md:mb-28">
+    <section class="blog mb-8 md:mb-28">
         <div class="container">
             <!-- section header -->
             <div class="flex justify-between items-end mb-5 md:mb-12">
@@ -1564,7 +1568,7 @@
             <!-- section content -->
             <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-5">
                 <div class="flex sm:block gap-x-2.5 flex-nowrap group p-2.5 md:pb-2 bg-white dark:bg-zinc-700 shadow-normal rounded-2xl">
-                    <div class="relative w-[130px] h-[130px] shrink-0 sm:mb-4 rounded-2xl rounded-bl-4xl overflow-hidden  sm:h-auto sm:w-auto">
+                    <div class="relative w-[130px] h-[130px] shrink-0 sm:mb-4 rounded-2xl rounded-bl-4xl overflow-hidden sm:h-auto sm:w-auto">
                         <img src="./images/blogs/blog-1.png" alt="Blog 1"
                              class="h-full w-full sm:h-auto object-cover">
                         <div class="absolute inset-0 w-full h-full hidden md:flex md:justify-center md:items-center invisible opacity-0 group-hover:opacity-100 group-hover:visible transition-all delay-75 bg-gradient-to-r from-orange-200/80 to-orange-300/80">
@@ -1696,6 +1700,34 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+    <!-- contact-us section -->
+    <section class="contact-us mb-16 md:mb-28">
+        <div class="container">
+            <div class="flex flex-col lg:flex-row items-center lg:items-start gap-y-8 lg:gap-x-5">
+                <img src="./images/contact.png" class="shrink-0 w-[296px]" alt="contact">
+                <div class="text-zinc-700 dark:text-white">
+                    <h3 class="font-MorabbaMedium text-2xl md:text-5xl mb-0.5 md:mb-1.5">یکی از بهترین قهوه ها !</h3>
+                    <span class="font-MorabbaLight text-lg md:text-3xl/[48px]">کیفیت قهوه را از ما بخواهید...</span>
+                    <div class="flex gap-x-2.5 my-5 md:my-6">
+                        <span class="inline-block w-1 h-1 bg-zinc-700 dark:bg-gray-400 rounded-full"></span>
+                        <span class="inline-block w-1 h-1 bg-zinc-700 dark:bg-gray-400 rounded-full"></span>
+                        <span class="inline-block w-1 h-1 bg-zinc-700 dark:bg-gray-400 rounded-full"></span>
+                    </div>
+                    <p class="text-lg md: text-2xl">فضای گرم و دنج ما را احساس کنید، جایی که همه می توانند قهوه معطری
+                        پیدا کنند و
+                        دسرهای خوشمزه ما را که کاملاً با قهوه داغ همراه شده است، امتحان کنند. فضای داخلی شیک و کارکنان
+                        خوش برخورد ما روز شما را می سازد!</p>
+                    <a href="#"
+                       class="inline-flex gap-x-2 justify-center items-center mt-5 md:mt-6 px-6 py-3.5 md:py-4 text-orange-300 md:text-xl tracking-tightest border md:border-2 border-orange-300 rounded-full">
+                        <svg class="w-5 h-5 md:w-8 md:h-8">
+                            <use href="#phone"></use>
+                        </svg>
+                        ثبت سفارش تلفنی
+                    </a>
+                </div>
             </div>
         </div>
     </section>
