@@ -50,6 +50,7 @@ module.exports = {
             }
         },
         screens: {
+            '3xs': '360px',
             '2xs': '400px',
             'xs': '480px',
             'sm': '640px',
