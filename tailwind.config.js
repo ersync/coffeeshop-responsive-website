@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./public/**/*.{html,js}"],
+    content: ["./**/*.{html,js}"],
     darkMode: "class",
     theme: {
         extend: {
@@ -45,8 +45,8 @@ module.exports = {
                 400: "400ms",
             },
             backgroundImage: {
-                "home-desktop": "url(/public/images/headerBgDesktop.webp)",
-                "home-mobile": "url(/public/images/headerBgMobile.webp)",
+                "home-desktop": "url(/images/headerBgDesktop.webp)",
+                "home-mobile": "url(/images/headerBgMobile.webp)",
             },
         },
         screens: {

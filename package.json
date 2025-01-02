@@ -1,13 +1,13 @@
 {
-  "name": "coffeeshop",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./public/styles/app.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./public/styles/app.css --minify",
-    "preview": "npx serve public"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.4.1",
-    "serve": "^14.2.1"
-  }
+    "name": "coffeeshop",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "npx tailwindcss -i ./src/input.css -o ./public/styles/app.css --watch & serve public",
+        "build": "npx tailwindcss -i ./src/input.css -o ./public/styles/app.css --minify",
+        "preview": "npx serve public"
+    },
+    "devDependencies": {
+        "tailwindcss": "^3.4.1",
+        "serve": "^14.2.1"
+    }
 }
